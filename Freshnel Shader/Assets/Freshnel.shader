@@ -34,14 +34,13 @@ Shader "Unlit/Freshnel"
 
             struct v2f //Vertex to fragments
             {
-                
-                float4 vertex : SV_POSITION;
+                float4 vertex : SV_POSITION;//System value positionl
                 //For the freshnel effect it is needed to know the normal information and the view direction of the camera
                 float3 normal : TEXCOORD1;
                 float3 viewDir : TEXCOORD2;
             };
 
-
+            //Creating values that can be manipulated from the viewport.
             float _FreshnelStrength;
             float _FreshnelRamp;
             float _fresnelAnimaterVal;
@@ -50,8 +49,8 @@ Shader "Unlit/Freshnel"
             v2f vert (appdata v)
             {
                 v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
                 //Getting normal and view direction data from unity
+                o.vertex = UnityObjectToClipPos(v.vertex);
                 o.normal = UnityObjectToWorldNormal(v.normal);
                 o.viewDir = normalize(WorldSpaceViewDir(v.vertex));
                 return o;
