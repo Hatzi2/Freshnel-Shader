@@ -19,3 +19,11 @@ The ramp defines how much of the object will be effected by the fresnel effect.
 **Animation Speed**
 Recomended setting = 75
 Changes the speed of the animation, 0 will stop the animation entirely
+
+## Extra information
+### Project version
+This project has been tested in unity version 2021.3.10f1
+
+### References
+https://www.youtube.com/watch?v=nuoQdbJwAHo&list=WL&index=2&t=191s
+This project has been created with assistance from this youtube video, after the timestamp of 191 seconds it has no longer been used.
