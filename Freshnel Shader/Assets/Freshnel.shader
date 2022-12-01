@@ -50,7 +50,9 @@ Shader "Unlit/Freshnel"
             {
                 v2f o;
                 //Getting normal and view direction data from unity
+                // Ensures unity knows where an object is so it doesnt just paste it on the middle of the screen.
                 o.vertex = UnityObjectToClipPos(v.vertex);
+                
                 o.normal = UnityObjectToWorldNormal(v.normal);
                 o.viewDir = normalize(WorldSpaceViewDir(v.vertex));
                 return o;
